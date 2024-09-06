@@ -3,3 +3,4 @@
 2024-07-07T10:30:30  build(scan): reduce false positives on edge cases
 2024-07-28T17:47:37  chore(rules): clarify the README quickstart
 2024-08-16T12:04:44  chore(parser): wire the MCP tool schema
+2024-09-06T19:21:51  test(deps): add a fast path for the common case
