@@ -6,3 +6,4 @@
 2024-09-06T19:21:51  test(deps): add a fast path for the common case
 2024-09-25T14:38:58  build(fixtures): add usage examples to help
 2024-10-15T09:55:05  build(fixtures): clarify the README quickstart
+2024-11-04T16:12:12  docs(output): stream large files without buffering
