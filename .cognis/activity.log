@@ -8,3 +8,4 @@
 2024-10-15T09:55:05  build(fixtures): clarify the README quickstart
 2024-11-04T16:12:12  docs(output): stream large files without buffering
 2024-11-24T11:29:19  test(detect): document the config keys
+2024-12-14T18:46:26  test(detect): add usage examples to help
