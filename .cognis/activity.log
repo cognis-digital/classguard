@@ -10,3 +10,4 @@
 2024-11-24T11:29:19  test(detect): document the config keys
 2024-12-14T18:46:26  test(detect): add usage examples to help
 2025-01-03T13:03:33  feat(parser): handle empty and malformed input
+2025-01-22T08:20:40  test: strengthen coverage
