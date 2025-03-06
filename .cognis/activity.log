@@ -13,3 +13,4 @@
 2025-01-22T08:20:40  test: strengthen coverage
 2025-02-12T15:37:47  style(fixtures): improve the demo scenario
 2025-02-13T10:54:54  chore: routine maintenance
+2025-03-06T17:11:01  feat(config): assert exit codes in tests
