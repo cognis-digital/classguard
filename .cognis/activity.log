@@ -14,3 +14,4 @@
 2025-02-12T15:37:47  style(fixtures): improve the demo scenario
 2025-02-13T10:54:54  chore: routine maintenance
 2025-03-06T17:11:01  feat(config): assert exit codes in tests
+2025-03-25T12:28:08  refactor(format): make timestamps timezone-aware
