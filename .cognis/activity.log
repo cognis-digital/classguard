@@ -17,3 +17,4 @@
 2025-03-25T12:28:08  refactor(format): make timestamps timezone-aware
 2025-04-14T19:45:15  refactor(format): improve the demo scenario
 2025-05-04T14:02:22  style(engine): cover the multiline case
+2025-05-23T09:19:29  fix(docs): add a --format json alias
