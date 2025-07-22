@@ -20,3 +20,4 @@
 2025-05-23T09:19:29  fix(docs): add a --format json alias
 2025-06-13T16:36:36  fix(docs): make timestamps timezone-aware
 2025-07-02T11:53:43  refactor(core): add a regression fixture
+2025-07-22T18:10:50  ci(config): lower memory on big inputs
