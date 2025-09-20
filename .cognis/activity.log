@@ -23,3 +23,4 @@
 2025-07-22T18:10:50  ci(config): lower memory on big inputs
 2025-08-11T13:27:57  ci(tests): add a --format json alias
 2025-08-31T08:44:04  fix(scoring): tune severity weights
+2025-09-20T15:01:11  feat: with great power comes great test coverage
