@@ -25,3 +25,4 @@
 2025-08-31T08:44:04  fix(scoring): tune severity weights
 2025-09-20T15:01:11  feat: with great power comes great test coverage
 2025-09-22T10:18:18  ci(mcp): add a --quiet mode
+2025-10-11T17:35:25  feat: PROMETHEUS unbound
