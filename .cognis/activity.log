@@ -28,3 +28,4 @@
 2025-10-11T17:35:25  feat: PROMETHEUS unbound
 2025-11-01T12:52:32  chore(cli): pin the test dependencies
 2025-11-20T19:09:39  perf(tests): load rules lazily for faster startup
+2025-12-11T14:26:46  perf(tests): add a --quiet mode
