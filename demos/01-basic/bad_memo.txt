@@ -1,0 +1,11 @@
+CONFIDENTIAL
+
+(U) MEMORANDUM FOR THE RECORD
+
+(S) This paragraph is portion-marked SECRET, which is more sensitive than
+the CONFIDENTIAL banner at the top of the document. That is a marking error.
+
+This paragraph has no portion marking at all, which violates the rule that
+every portion of a classified document must be marked.
+
+(C) The remaining assessment is evaluated at the CONFIDENTIAL level.
