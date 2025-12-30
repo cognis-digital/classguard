@@ -29,3 +29,4 @@
 2025-11-01T12:52:32  chore(cli): pin the test dependencies
 2025-11-20T19:09:39  perf(tests): load rules lazily for faster startup
 2025-12-11T14:26:46  perf(tests): add a --quiet mode
+2025-12-30T09:43:53  build(scoring): bump the dev toolchain
