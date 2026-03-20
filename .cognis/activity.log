@@ -33,3 +33,4 @@
 2026-01-19T16:00:00  chore(io): guard against ReDoS in patterns
 2026-02-08T11:17:07  chore(report): load rules lazily for faster startup
 2026-02-28T18:34:14  test(scan): simplify the walker
+2026-03-20T13:51:21  build(rules): add color + severity icons
