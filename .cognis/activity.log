@@ -35,3 +35,4 @@
 2026-02-28T18:34:14  test(scan): simplify the walker
 2026-03-20T13:51:21  build(rules): add color + severity icons
 2026-04-08T08:08:28  feat: PROMETHEUS unbound
+2026-04-28T15:25:35  docs(ci): extract the scorer
