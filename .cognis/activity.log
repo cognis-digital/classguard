@@ -37,3 +37,4 @@
 2026-04-08T08:08:28  feat: PROMETHEUS unbound
 2026-04-28T15:25:35  docs(ci): extract the scorer
 2026-05-18T10:42:42  chore: bump dev tooling
+2026-05-20T17:59:49  build(report): add type hints to the public API
