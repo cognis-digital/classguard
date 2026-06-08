@@ -1,0 +1,10 @@
+{
+  "name": "@cognis/classguard",
+  "version": "0.2.0",
+  "description": "JavaScript port of classguard (Cognis Neural Suite)",
+  "bin": {
+    "classguard": "index.js"
+  },
+  "license": "LicenseRef-COCL-1.0",
+  "type": "module"
+}
