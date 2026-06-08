@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: classguard, labels: { app: classguard } }
+spec:
+  replicas: 1
+  selector: { matchLabels: { app: classguard } }
+  template:
+    metadata: { labels: { app: classguard } }
+    spec:
+      containers:
+        - name: classguard
+          image: ghcr.io/cognis-digital/classguard:latest
+          ports: [{ containerPort: 8000 }]
+          resources:
+            requests: { cpu: "50m", memory: "64Mi" }
+            limits: { cpu: "500m", memory: "256Mi" }
+---
+apiVersion: v1
+kind: Service
+metadata: { name: classguard }
+spec:
+  selector: { app: classguard }
+  ports: [{ port: 80, targetPort: 8000 }]
