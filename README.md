@@ -16,7 +16,7 @@
 </div>
 
 ```bash
-pip install cognis-classguard
+pip install "git+https://github.com/cognis-digital/classguard.git"
 classguard scan .            # → prioritized findings in seconds
 ```
 
@@ -48,7 +48,7 @@ Validate classification banner markings (CUI/CONFIDENTIAL/SECRET) in documents p
 ## Quick start
 
 ```bash
-pip install cognis-classguard
+pip install "git+https://github.com/cognis-digital/classguard.git"
 classguard --version
 classguard scan .                       # scan current project
 classguard scan . --format json         # machine-readable
