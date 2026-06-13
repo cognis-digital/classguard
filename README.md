@@ -20,6 +20,12 @@ pip install "git+https://github.com/cognis-digital/classguard.git"
 classguard scan .            # → prioritized findings in seconds
 ```
 
+<!-- cognis:layman:start -->
+## What is this?
+
+Classguard is a command-line tool that checks documents to make sure they carry the correct government classification labels — things like SECRET, CONFIDENTIAL, or CUI (Controlled Unclassified Information). It reads a text document and verifies that the classification banner appears at the top and bottom, that each paragraph is individually labeled with its sensitivity level, and that no paragraph is marked more sensitive than the document's overall banner. It is aimed at security officers, cleared staff, and development teams who need to catch mislabeled documents before they leave a secure environment.
+<!-- cognis:layman:end -->
+
 ## Contents
 
 - [Why classguard?](#why) · [Features](#features) · [Quick start](#quick-start) · [Example](#example) · [Architecture](#architecture) · [AI stack](#ai-stack) · [How it compares](#how-it-compares) · [Integrations](#integrations) · [Install anywhere](#install-anywhere) · [Related](#related) · [Contributing](#contributing)
@@ -45,6 +51,42 @@ Validate classification banner markings (CUI/CONFIDENTIAL/SECRET) in documents p
 <div align="right"><a href="#top">↑ back to top</a></div>
 
 <a name="quick-start"></a>
+<!-- cognis:install:start -->
+## Install
+
+`classguard` is source-available (not published to PyPI) — every method below installs
+straight from GitHub. Pick whichever you prefer; the one-line scripts auto-detect
+the best tool available on your machine.
+
+**One-liner (Linux / macOS):**
+```sh
+curl -fsSL https://raw.githubusercontent.com/cognis-digital/classguard/HEAD/install.sh | sh
+```
+
+**One-liner (Windows PowerShell):**
+```powershell
+irm https://raw.githubusercontent.com/cognis-digital/classguard/HEAD/install.ps1 | iex
+```
+
+**Or install manually — any one of:**
+```sh
+pipx install "git+https://github.com/cognis-digital/classguard.git"     # isolated (recommended)
+uv tool install "git+https://github.com/cognis-digital/classguard.git"  # uv
+pip install "git+https://github.com/cognis-digital/classguard.git"      # pip
+```
+
+**From source:**
+```sh
+git clone https://github.com/cognis-digital/classguard.git
+cd classguard && pip install .
+```
+
+Then run:
+```sh
+classguard --help
+```
+<!-- cognis:install:end -->
+
 ## Quick start
 
 ```bash
