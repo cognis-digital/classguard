@@ -20,6 +20,40 @@ pip install cognis-classguard
 classguard scan .            # → prioritized findings in seconds
 ```
 
+## Usage — step by step
+
+1. **Install:**
+
+   ```bash
+   pip install -e .
+   ```
+
+2. **Check one or more documents** for classification banner & portion-marking compliance with the `check` subcommand:
+
+   ```bash
+   classguard check report.txt
+   ```
+
+3. **Check several files at once** (the `files` argument is variadic):
+
+   ```bash
+   classguard check doc1.txt doc2.txt doc3.txt
+   ```
+
+4. **Read the result.** Each document prints `[PASS]`/`[FAIL]`, the top/bottom banner, banner level, highest portion, unmarked-paragraph count, and per-finding `ERROR`/`WARN`/`INFO` lines with codes. Use `--format json` for piping. The process **exits 1 when any document has marking errors** (and with `--strict`, when any warnings exist); **2 on IO error**:
+
+   ```bash
+   classguard check report.txt --format json
+   ```
+
+5. **Use it in CI** — gate document releases on clean markings (treat warnings as failures):
+
+   ```bash
+   classguard check docs/*.txt --strict --format json || {
+     echo "Classification marking errors found"; exit 1; }
+   ```
+
+
 ## Contents
 
 - [Why classguard?](#why) · [Features](#features) · [Quick start](#quick-start) · [Example](#example) · [Architecture](#architecture) · [AI stack](#ai-stack) · [How it compares](#how-it-compares) · [Integrations](#integrations) · [Install anywhere](#install-anywhere) · [Related](#related) · [Contributing](#contributing)
