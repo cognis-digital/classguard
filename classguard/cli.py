@@ -98,11 +98,22 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: Optional[List[str]] = None) -> int:
     parser = build_parser()
-    args = parser.parse_args(argv)
+    try:
+        args = parser.parse_args(argv)
+    except SystemExit as exc:
+        # argparse calls sys.exit() on bad args; propagate as-is.
+        return int(exc.code) if exc.code is not None else 2
     if not getattr(args, "command", None):
-        parser.print_help()
+        parser.print_help(sys.stderr)
         return 2
-    return args.func(args)
+    try:
+        return args.func(args)
+    except KeyboardInterrupt:
+        print("\n%s: interrupted." % TOOL_NAME, file=sys.stderr)
+        return 2
+    except Exception as exc:  # pragma: no cover
+        print("%s: unexpected error: %s" % (TOOL_NAME, exc), file=sys.stderr)
+        return 2
 
 
 if __name__ == "__main__":

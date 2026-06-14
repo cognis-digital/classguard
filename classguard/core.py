@@ -73,7 +73,10 @@ def classify_level(token: str) -> Optional[str]:
 def _rank(level: Optional[str]) -> int:
     if level is None:
         return -1
-    return LEVEL_ORDER.index(level)
+    try:
+        return LEVEL_ORDER.index(level)
+    except ValueError:
+        return -1
 
 
 @dataclass
@@ -144,7 +147,18 @@ def _find_banner(lines: List[str], forward: bool):
 
 
 def analyze_text(text: str, source: str = "<text>") -> Report:
-    """Analyze raw document text and return a Report."""
+    """Analyze raw document text and return a Report.
+
+    Raises:
+        TypeError: if *text* is not a string.
+        ValueError: if *source* is not a non-empty string.
+    """
+    if not isinstance(text, str):
+        raise TypeError(
+            "analyze_text() expects a str, got %s" % type(text).__name__
+        )
+    if not isinstance(source, str) or not source:
+        raise ValueError("source must be a non-empty string")
     lines = text.splitlines()
     report = Report(source=source)
 
@@ -261,7 +275,16 @@ def analyze_text(text: str, source: str = "<text>") -> Report:
 
 
 def analyze_document(path: str) -> Report:
-    """Read a file from disk and analyze it."""
+    """Read a file from disk and analyze it.
+
+    Raises:
+        TypeError: if *path* is not a string.
+        OSError: if the file cannot be opened (not found, permission denied, etc.).
+    """
+    if not isinstance(path, str):
+        raise TypeError("analyze_document() expects a str path, got %s" % type(path).__name__)
+    if not path:
+        raise ValueError("path must be a non-empty string")
     with open(path, "r", encoding="utf-8", errors="replace") as fh:
         text = fh.read()
     return analyze_text(text, source=path)
